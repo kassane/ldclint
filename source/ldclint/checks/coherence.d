@@ -141,7 +141,7 @@ extern(C++) final class CoherenceCheckVisitor : DFSPluginVisitor
                 break;
             default:
                 // this errors if the size is not known
-                cast(void)t.size();
+                cast(void)t.sizemask();
                 break;
         }
 

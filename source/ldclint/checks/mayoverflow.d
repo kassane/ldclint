@@ -91,10 +91,10 @@ extern(C++) final class MayOverflowCheckVisitor : DFSPluginVisitor
             }
         }
 
-        auto s1 = t1.size();
-        auto s2 = t2.size();
+        auto s1 = t1.sizemask();
+        auto s2 = t2.sizemask();
 
-        auto castSize = type.size();
+        auto castSize = type.sizemask();
 
         if (s1 < castSize && s2 < castSize)
         {
